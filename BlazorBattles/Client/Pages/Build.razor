@@ -1,4 +1,5 @@
 ﻿@page "/build"
+@inject IBananaService BananaService
 
 <h3>Build</h3>
 @*  
@@ -11,6 +12,6 @@
 @code {
 	private void EatBananas(int amount)
 	{
-		Console.WriteLine($"{amount} of bananas eaten");
+		BananaService.EatBananas(amount);
 	}
 }
