@@ -31,7 +31,7 @@ namespace BlazorBattles.Server.Controllers
             return Enumerable.Range(1, 7).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
+                TemperatureC = rng.Next(-20, 42),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();

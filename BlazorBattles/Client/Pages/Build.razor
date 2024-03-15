@@ -1,0 +1,16 @@
+﻿@page "/build"
+
+<h3>Build</h3>
+@*  
+	Es ist nicht möglich in einer .razor-file eine Funktion direkt auf einen Button
+	zu binden, die einen Parameter erwartet. Daher muss eine Lambda-Funktion verwendet
+	werden, die die Funktion mit dem Parameter aufruft.
+*@
+<button class="btn btn-primary" @onclick="()=> EatBananas(10)">Eat Bananas</button>
+
+@code {
+	private void EatBananas(int amount)
+	{
+		Console.WriteLine($"{amount} of bananas eaten");
+	}
+}
